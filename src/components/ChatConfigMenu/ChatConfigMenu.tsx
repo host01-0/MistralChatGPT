@@ -4,10 +4,8 @@ import { useTranslation } from 'react-i18next';
 
 import PopupModal from '@components/PopupModal';
 import {
-  FrequencyPenaltySlider,
   MaxTokenSlider,
   ModelSelector,
-  PresencePenaltySlider,
   TemperatureSlider,
   TopPSlider,
 } from '@components/ConfigMenu/ConfigMenu';
@@ -50,12 +48,6 @@ const ChatConfigPopup = ({
   const [_maxToken, _setMaxToken] = useState<number>(config.max_tokens);
   const [_temperature, _setTemperature] = useState<number>(config.temperature);
   const [_topP, _setTopP] = useState<number>(config.top_p);
-  const [_presencePenalty, _setPresencePenalty] = useState<number>(
-    config.presence_penalty
-  );
-  const [_frequencyPenalty, _setFrequencyPenalty] = useState<number>(
-    config.frequency_penalty
-  );
 
   const { t } = useTranslation('model');
 
@@ -65,8 +57,6 @@ const ChatConfigPopup = ({
       max_tokens: _maxToken,
       temperature: _temperature,
       top_p: _topP,
-      presence_penalty: _presencePenalty,
-      frequency_penalty: _frequencyPenalty,
     });
     setDefaultSystemMessage(_systemMessage);
     setIsModalOpen(false);
@@ -77,8 +67,6 @@ const ChatConfigPopup = ({
     _setMaxToken(_defaultChatConfig.max_tokens);
     _setTemperature(_defaultChatConfig.temperature);
     _setTopP(_defaultChatConfig.top_p);
-    _setPresencePenalty(_defaultChatConfig.presence_penalty);
-    _setFrequencyPenalty(_defaultChatConfig.frequency_penalty);
     _setSystemMessage(_defaultSystemMessage);
   };
 
@@ -104,14 +92,6 @@ const ChatConfigPopup = ({
           _setTemperature={_setTemperature}
         />
         <TopPSlider _topP={_topP} _setTopP={_setTopP} />
-        <PresencePenaltySlider
-          _presencePenalty={_presencePenalty}
-          _setPresencePenalty={_setPresencePenalty}
-        />
-        <FrequencyPenaltySlider
-          _frequencyPenalty={_frequencyPenalty}
-          _setFrequencyPenalty={_setFrequencyPenalty}
-        />
         <div
           className='btn btn-neutral cursor-pointer mt-5'
           onClick={handleReset}
