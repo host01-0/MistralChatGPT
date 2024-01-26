@@ -21,10 +21,10 @@ export const getChatGPTEncoding = (
   messages: MessageInterface[],
   model: ModelOptions
 ) => {
-  const isGpt3 = model === 'gpt-3.5-turbo';
 
-  const msgSep = isGpt3 ? '\n' : '';
-  const roleSep = isGpt3 ? '\n' : '<|im_sep|>';
+
+  const msgSep = '';
+  const roleSep = '<|im_sep|>';
 
   const serialized = [
     messages
@@ -75,7 +75,7 @@ export const limitMessageTokens = (
   // Process first message
   if (retainSystemMessage) {
     // Insert the system message in the third position from the end
-    limitedMessages.splice(-3, 0, { ...messages[0] });
+    limitedMessages.splice(0, 0, { ...messages[0] });
   } else if (!isSystemFirstMessage) {
     // Check if the first message (non-system) can fit within the limit
     const firstMessageTokenCount = countTokens([messages[0]], model);

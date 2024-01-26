@@ -39,6 +39,11 @@ const AboutMenu = () => {
                       target='_blank'
                       className='link'
                     />,
+                    <a
+                      href='https://github.com/Layoric/MistralChatGPT'
+                      target='_blank'
+                      className='link'
+                    />,
                   ]}
                 />
               </p>
@@ -52,25 +57,6 @@ const AboutMenu = () => {
                       href={t('initiative.link', { ns: 'about' }) as string}
                       target='_blank'
                       className='link'
-                    />,
-                  ]}
-                />
-              </p>
-
-              <h2 className='text-lg font-bold'>
-                {t('discordServer.title', { ns: 'about' })}
-              </h2>
-              <p>{t('discordServer.paragraph1', { ns: 'about' })}</p>
-
-              <p>
-                <Trans
-                  i18nKey='discordServer.paragraph2'
-                  ns='about'
-                  components={[
-                    <a
-                      className='link'
-                      href='https://discord.gg/g3Qnwy4V6A'
-                      target='_blank'
                     />,
                   ]}
                 />
@@ -104,6 +90,7 @@ const AboutMenu = () => {
                       alt='Support us through GitHub Sponsors'
                     />
                   </a>
+
                   <a href='https://ko-fi.com/betterchatgpt' target='_blank'>
                     <img
                       src='./kofi.svg'
@@ -131,7 +118,6 @@ const AboutMenu = () => {
                     </div>
                   </div>
                 </div>
-                <p>{t('support.paragraph4', { ns: 'about' })}</p>
               </>
 
               <h2 className='text-lg font-bold'>

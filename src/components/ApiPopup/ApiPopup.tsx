@@ -61,7 +61,7 @@ const ApiPopup = () => {
             ns='api'
             components={[
               <a
-                href='https://platform.openai.com/account/api-keys'
+                href='https://console.mistral.ai/user/api-keys'
                 className='link'
                 target='_blank'
               />,
