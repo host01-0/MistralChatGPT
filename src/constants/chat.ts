@@ -18,31 +18,51 @@ Carefully heed the user's instructions.
 Respond using Markdown.`;
 
 export const modelOptions: ModelOptions[] = [
-  'mistral-tiny',
-  'mistral-small',
-  'mistral-medium'
+  'open-mistral-7b',
+  'open-mixtral-8x7b',
+  'mistral-small-latest',
+  'mistral-medium-latest',
+  'mistral-large-latest'
 ];
 
-export const defaultModel = 'mistral-small';
+export const defaultModel = 'mistral-small-latest';
 
 export const modelMaxToken = {
-  'mistral-tiny': 16384,
-  'mistral-small': 32768,
-  'mistral-medium': 32768
+  'open-mistral-7b': 16384,
+  'open-mixtral-8x7b': 16384,
+  'mistral-small-latest': 32768,
+  'mistral-medium-latest': 32768,
+  'mistral-large-latest': 32768
 };
 
 export const modelCost = {
-  'mistral-tiny': {
-    prompt: { price: 0.00015, unit: 1000 },
-    completion: {price: 0.00046, unit: 1000}
+  'open-mistral-7b': {
+    prompt: { price: 0.00025, unit: 1000 },
+    completion: {price: 0.00025, unit: 1000}
+  },
+  'open-mixtral-8x7b': {
+    prompt: { price: 0.0007, unit: 1000 },
+    completion: {price: 0.0007, unit: 1000}
   },
   'mistral-small': {
-    prompt: { price: 0.00066, unit: 1000 },
-    completion: {price: 0.00198, unit: 1000}
+    prompt: { price: 0.002, unit: 1000 },
+    completion: {price: 0.006, unit: 1000}
   },
-  'mistral-medium' : {
-    prompt: { price: 0.00275, unit: 1000 },
-    completion: {price: 0.00825, unit: 1000}
+  'mistral-medium': {
+    prompt: { price: 0.0027, unit: 1000 },
+    completion: {price: 0.0081, unit: 1000}
+  },
+  'mistral-small-latest': {
+    prompt: { price: 0.002, unit: 1000 },
+    completion: {price: 0.006, unit: 1000}
+  },
+  'mistral-medium-latest': {
+    prompt: { price: 0.0027, unit: 1000 },
+    completion: {price: 0.0081, unit: 1000}
+  },
+  'mistral-large-latest' : {
+    prompt: { price: 0.008, unit: 1000 },
+    completion: {price: 0.024, unit: 1000}
   },
 };
 
