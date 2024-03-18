@@ -19,7 +19,7 @@ You can obtain an API key by creating an account on the [Mistral AI website](htt
 ## Features
 
 - Utilizes Mistral AI for its conversational capabilities
-- Use `mistral-tiny`, `mistral-small`, or `mistral-medium` models
+- Use any of the [models listed](https://github.com/Layoric/MistralChatGPT/blob/5313bde1444e0ed2ed6575febc6aa27a356bc2f5/src/constants/chat.ts#L20-L26)
 - Simple and easy-to-use interface
 - Track your costs
 - Uses a proxy to bypass CORS limitations
