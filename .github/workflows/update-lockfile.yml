@@ -1,0 +1,30 @@
+name: Update yarn lockfile
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  update-lock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Enable corepack and prepare Yarn
+        run: |
+          corepack enable
+          corepack prepare yarn@4.9.1 --activate
+
+      - name: Install dependencies (may update lockfile)
+        run: yarn install
+
+      - name: Commit updated lockfiles (if any)
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "ci: update yarn lockfile via workflow"
+          file_pattern: |
+            yarn.lock
+            .yarn/*
+          branch: main
