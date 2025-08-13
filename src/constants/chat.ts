@@ -33,6 +33,8 @@ export const modelMaxToken = {
   'mistral-small-latest': 32768,
   'mistral-medium-latest': 32768,
   'mistral-large-latest': 32768
+  'mistral-small': 16384,
+  'mistral-medium': 16384
 };
 
 export const modelCost = {
