@@ -32,7 +32,7 @@ export const modelMaxToken = {
   'open-mixtral-8x7b': 16384,
   'mistral-small-latest': 32768,
   'mistral-medium-latest': 32768,
-  'mistral-large-latest': 32768
+  'mistral-large-latest': 32768,
   'mistral-small': 16384,
   'mistral-medium': 16384
 };
